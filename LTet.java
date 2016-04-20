@@ -2,7 +2,7 @@ package tetris;
 import java.awt.Point;
 
 
-public class LTet extends Tetronimo {
+public class LTet extends Tetromino {
 	protected Point[][] COORDS = {{new Point(0,1), new Point (1,1), new Point(2,1), new Point(2,2)},
 								  {new Point(1,2), new Point (1,1), new Point(1,0), new Point(2,0)},
 							      {new Point(2,1), new Point (1,1), new Point(0,1), new Point(0,0)},
