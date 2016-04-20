@@ -10,7 +10,7 @@ package tetris;
 
 import java.awt.Point;
 
-public abstract class Tetronimo {
+public abstract class Tetromino {
 	
 	protected final Point[][] COORDS = null;
 	protected final int COLOR = -1;
@@ -19,19 +19,19 @@ public abstract class Tetronimo {
 	protected int[][] grid;
 	protected int orient;
 	
-	public Tetronimo(int[][] grid){
+	public Tetromino(int[][] grid){
 		orient = 0;
 		home = new Point(3,19);
 		
 		this.grid = grid;
 	}
 	
-	//Moves tetronimo 1 left
+	//Moves tetromino 1 left
 	public boolean moveLeft(){
 		return move(-1, 0);
 	}
 	
-	//Moves tetronimp 1 right
+	//Moves tetromino 1 right
 	public boolean moveRight(){
 		return move(1, 0);
 	}
@@ -41,7 +41,7 @@ public abstract class Tetronimo {
 		return move(0, -1);
 	}
 	
-	//Moves the block as far down as possible
+	//Moves the tetromino as far down as possible
 	//Returns the number of rows fallen
 	public int drop(){
 		int count = 0;
@@ -52,7 +52,7 @@ public abstract class Tetronimo {
 		return count;
 	}
 	
-	//rotates the tetronimo 90 degrees
+	//rotates the tetromino 90 degrees
 	public boolean rotate(){
 		wipe();															//clear current position
 		orient = (orient + 1) % COORDS.length;							//advance orientation
@@ -77,7 +77,7 @@ public abstract class Tetronimo {
 		}
 	}
 	
-	//checks if there are any collisions for the block moving x squares right and y squares down
+	//checks if there are any collisions for the tetromino moving x squares right and y squares down
 	protected boolean checkMove(int x, int y){
 		Point[] squares = getAbs();
 		for(int i = 0; i < 4; i++){
