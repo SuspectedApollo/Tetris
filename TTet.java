@@ -2,20 +2,20 @@ package tetris;
 
 import java.awt.Point;
 
-public class TTet extends Tetromino {
+public class TTet extends Tetronimo {
 
-	protected final Point[][] COORDS = { {new Point(0,1), new Point (1,1), new Point(1,2), new Point(2,1)},
+	protected static final Point[][] COORDS = { {new Point(0,1), new Point (1,1), new Point(1,2), new Point(2,1)},
 										 {new Point(1,2), new Point (1,1), new Point(2,1), new Point(1,0)},
 										 {new Point(2,1), new Point (1,1), new Point(1,0), new Point(0,1)},
 										 {new Point(1,0), new Point (1,1), new Point(0,1), new Point(1,2)}};
 	
-	protected final int COLOR = 3;
+	protected static final int COLOR = 3;
 	
 	private boolean spinValid;	//Whether or not points can be awarded for a T-Spin
 	
 	
 	public TTet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 		
 		spinValid = false;
 	}
