@@ -8,6 +8,6 @@ public class OTet extends Tetromino {
 	protected final int COLOR = 2;
 	
 	public OTet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 	}
 }
