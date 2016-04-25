@@ -12,6 +12,6 @@ public class JTet extends Tetromino {
 
 	
 	public JTet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 	}
 }
