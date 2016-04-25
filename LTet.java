@@ -10,6 +10,6 @@ public class LTet extends Tetromino {
 	protected final int COLOR = 7;
 	
 	public LTet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 	}
 }
