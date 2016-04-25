@@ -12,6 +12,6 @@ public class ZTet extends Tetromino{
 	protected int COLOR = 5;
 	
 	public ZTet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 	}
 }
