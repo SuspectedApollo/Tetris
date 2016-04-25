@@ -65,8 +65,10 @@ public abstract class Tetromino {
 			return true;
 	}
 	
-	public void hold(){
+	//Clears the piece from the grid and returns the type of block
+	public int hold(){
 		wipe();
+		return COLOR;
 	}
 	
 	//moves tetromino x blocks right and y blocks up after checking if move is valid
