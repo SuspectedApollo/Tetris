@@ -70,7 +70,6 @@ public abstract class Tetromino {
 		if(!checkMove(x,y)){
 			return false;
 		}else{
-			wipe();
 			home.move(home.x + x, home.y + y);
 			draw();
 			return true;
@@ -80,12 +79,15 @@ public abstract class Tetromino {
 	//checks if there are any collisions for the tetromino moving x squares right and y squares down
 	protected boolean checkMove(int x, int y){
 		Point[] squares = getAbs();
+		wipe()
 		for(int i = 0; i < 4; i++){
 			if(((int)squares[i].getX() + x) < 0 || (int)squares[i].getX() + x > grid.length			//check that new x coordinate is in grid
 				||	((int)squares[i].getY() + y) < 0 || (int)squares[i].getY() + y > grid[0].length	//check that new y coordinate is in grid
-				|| 	(grid[(int)squares[i].getX() + x][(int)squares[i].getY() + y]) != 0)			//check that new coordinate is empty
+				|| 	(grid[(int)squares[i].getX() + x][(int)squares[i].getY() + y]) != 0)//check that new coordinate is empty
+				draw();
 				return false;
 			}
+		draw();
 		return true;
 	}
 	
