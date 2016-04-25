@@ -65,6 +65,10 @@ public abstract class Tetromino {
 			return true;
 	}
 	
+	public void hold(){
+		wipe();
+	}
+	
 	//moves tetromino x blocks right and y blocks up after checking if move is valid
 	protected boolean move(int x, int y){
 		if(!checkMove(x,y)){
