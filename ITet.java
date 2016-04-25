@@ -10,7 +10,7 @@ public class ITet extends Tetromino {
 										  {new Point(1,0), new Point (1,1), new Point(1,2), new Point(1,3)}};
 								
 	public ITet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 		home.setLocation(3, 18);	//Due to its size, I Tetronimo must have home start one lower
 	}
 }
