@@ -12,18 +12,21 @@ import java.awt.Point;
 
 public abstract class Tetromino {
 	
-	protected final Point[][] COORDS = null;
-	protected final int COLOR = -1;
+	protected final Point[][] COORDS;
+	protected final int COLOR;
 	
 	protected Point home;
 	protected int[][] grid;
 	protected int orient;
 	
-	public Tetromino(int[][] grid){
+	protected Tetromino(int[][] grid, Point[][] coords, int color){
 		orient = 0;
-		home = new Point(3,19);
+		home.new Point(3, 19);
 		
 		this.grid = grid;
+		
+		this.COORDS = coords;
+		this.COLOR = color;
 	}
 	
 	//Moves tetromino 1 left
