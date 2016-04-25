@@ -71,7 +71,7 @@ public abstract class Tetromino {
 			return false;
 		}else{
 			wipe();
-			home.move(x, y);
+			home.move(home.x + x, home.y + y);
 			draw();
 			return true;
 		}
