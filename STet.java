@@ -12,6 +12,6 @@ public class STet extends Tetromino{
 	protected int COLOR = 4;
 	
 	public STet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 	}
 }
