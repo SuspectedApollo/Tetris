@@ -15,7 +15,7 @@ public class TTet extends Tetromino {
 	
 	
 	public TTet(int[][] grid){
-		super(grid);
+		super(grid, COORDS, COLOR);
 		
 		spinValid = false;
 	}
